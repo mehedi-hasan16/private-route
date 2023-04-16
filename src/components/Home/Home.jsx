@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import { authContext } from '../../providers/AuthProvider';
 
 const Home = () => {
-    const user = useContext(authContext);
+    const {user} = useContext(authContext);
     return (
-        <div>
-            this is home { user && user.fullname}
+        <div className='text-5xl'>
+            Hi, user email is:  { user && user.email}
         </div>
     );
 };
